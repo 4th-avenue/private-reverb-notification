@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
 	&& docker-php-ext-install -j$(nproc) gd \
-    && docker-php-ext-install pdo_mysql bcmath intl zip \
+    && docker-php-ext-install pdo_mysql bcmath intl zip pcntl \
     && pecl install redis xdebug \
     && docker-php-ext-enable redis xdebug \
     && rm -rf /var/lib/apt/lists/*
