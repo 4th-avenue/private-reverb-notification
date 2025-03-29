@@ -19,7 +19,7 @@ class ProfileController extends Controller
 
         broadcast(new PrivateNotificationEvent($userId, $message));
 
-        return redirect()->back()->with('success', 'Notification sent to user{$userId}.');
+        return redirect()->back()->with('success', "Notification sent to user{$userId}.");
     }
 
     /**
